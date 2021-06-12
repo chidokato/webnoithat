@@ -126,3 +126,7 @@
     top: 80%;
     left: 10%;
 }
+.artcatalogue .article .title {font-size: 1.6rem;}
+.artcatalogue .article .description {font-size: 1.3rem;line-height: 25px;}
+.artcatalogue .article .meta{font-size: 1.1rem;margin: 13px 0px;}
+.list a{font-size: 1.2rem}

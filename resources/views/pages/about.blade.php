@@ -17,83 +17,68 @@
 @endsection
 
 @section('content')
+<section id="body">
+	<div class="product-page" class="page-body">
+		<div class="breadcrumb">
+            <div class="uk-container uk-container-center customer-container">
+                <ul class="uk-breadcrumb">
+                    <li class="uk-active"><a href="https://duyvillas.com/" title="Trang chủ"><i class="fa fa-home"></i> Trang chủ</a></li>
+                    <li>Đất Nền</li>
+                </ul>
+            </div>
+        </div>
+		<div class="uk-container uk-container-center customer-container">
+			<div class="uk-grid ">
+			    <div class="uk-width-large-3-4">
+			        <section class="artcatalogue">
+                    <header class="panel-head">
+                        <h1 class="heading-2"><span>Xu hướng dân nội thành di cư sang Quận Long Biên “an cư lạc nghiệp”</span></h1>
+                    </header>
+                    <section class="panel-body">
+                        <div class="detail-content">
+                            <p style="text-align:justify"><em>Xu hướng lựa chọn Long Biên là nơi để "an cư lạc nghiệp" đang gia tăng, nhất là sau thời điểm bùng phát dịch Covid-19. Trong đó, tỷ trọng khách hàng tìm kiếm đến từ khu vực phố cổ chiếm phần lớn.</em></p>
 
-<div data-elementor-type="wp-page" data-elementor-id="8" class="elementor elementor-8" data-elementor-settings="[]">
-<div class="elementor-inner">
-<div class="elementor-section-wrap">
-<section class="elementor-section elementor-top-section elementor-element elementor-element-ae248c4 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="ae248c4" data-element_type="section">
-<div class="elementor-container elementor-column-gap-no">
-<div class="elementor-row">
-<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6b92c4e" data-id="6b92c4e" data-element_type="column">
-<div class="elementor-column-wrap elementor-element-populated">
-<div class="elementor-widget-wrap">
-<div class="elementor-element elementor-element-b369bce elementor-widget elementor-widget-ideapark-page-header" data-id="b369bce" data-element_type="widget" data-widget_type="ideapark-page-header.default">
-<div class="elementor-widget-container">
-<header
-class="l-section c-page-header c-page-header--header-type-1 c-page-header--default
-c-page-header--page c-page-header--high c-page-header--custom-bg"
-style="background-color:#bebfc1;background-image:url(../wp-content/uploads/2020/10/luchiana-2058254205.jpg);background-size: cover; background-repeat: no-repeat; background-position: center;">
 
-<div class="c-page-header__wrap">
-<h1 class="c-page-header__title">About us</h1>
-</div>
-
-<nav class="c-breadcrumbs">
-<ol class="c-breadcrumbs__list c-breadcrumbs__list--default" itemscope
-itemtype="http://schema.org/BreadcrumbList">
-<li class="c-breadcrumbs__item  c-breadcrumbs__item--first  "
-itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-<a itemprop="item" title="Home" href="../index.html"><span
-itemprop="name">Home</span></a><!--
---><i class="ip-breadcrumb c-breadcrumbs__separator"><!-- --></i>					<meta itemprop="position" content="1">
-</li>
-<li class="c-breadcrumbs__item   c-breadcrumbs__item--last "
-itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-<a itemprop="item" title="About us" href="index.html"><span
-itemprop="name">About us</span></a>					<meta itemprop="position" content="2">
-</li>
-</ol>
-</nav>	</header>
-
-<div class="woocommerce-notices-wrapper">
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+                        </div>
+                    </section><!-- .panel-body -->
+                </section>
+			    </div><!-- .uk-width-larg-3-4 -->
+			    <div class="uk-width-large-1-4 uk-visible-large">
+			        <aside class="aside">
+			            <section class="aside-prd-detail">
+			                <header class="panel-head">
+			                    <a href="location/ha-noi"><h3 class="heading"><span>Giới thiệu</span></h3></a>
+			                </header>
+			                <section class="panel-body">
+			                    <ul class="uk-list list">
+			                        <li style="padding: 5px; border-bottom: dashed 1px #ddd;"><a href="location/ha-noi/quan-ba-dinh">Quận Ba Đình</a></li>
+			                    </ul>
+			                </section>
+			            </section><!-- .aside-prd-detail -->
+			            <section class="aside-prd-detail aside-product">
+			                <header class="panel-head">
+			                    <h3 class="heading"><span>Tin tức mới nhất</span></h3>
+			                </header>
+			                <section class="panel-body">
+			                    <ul class="uk-list list-product">
+			                        <li>
+			                            <div class="product uk-clearfix">
+			                                <div class="thumb">
+			                                    <a class="image img-cover" href="tin-tuc-bds/xu-huong-dan-noi-thanh-di-cu-sang-quan-long-bien-an-cu-lac-nghiep-/94.html" title="Xu hướng dân nội thành di cư sang Quận Long Biên “an cư lạc nghiệp”"><img src="data/news/80-60/Hai bờ sông Hồng.jpg" alt="Xu hướng dân nội thành di cư sang Quận Long Biên “an cư lạc nghiệp”"></a>
+			                                </div>
+			                                <div class="infor">
+			                                    <h4 class="title"><a href="tin-tuc-bds/xu-huong-dan-noi-thanh-di-cu-sang-quan-long-bien-an-cu-lac-nghiep-/94.html" title="Xu hướng dân nội thành di cư sang Quận Long Biên “an cư lạc nghiệp”">Xu hướng dân nội thành di cư sang Quận Long Biên “an cư lạc nghiệp”</a></h4>
+			                                </div>
+			                            </div>
+			                        </li>
+			                    </ul>
+			                </section>
+			            </section><!-- .aside-panel -->
+			        </aside>
+			    </div>        
+			</div>
+ 		</div>
+		@include('layout.bottom')
+	</div><!-- .uk-container -->
 </section>
-<section class="elementor-section elementor-top-section elementor-element elementor-element-f7b080a elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="f7b080a" data-element_type="section">
-<div class="elementor-container elementor-column-gap-no">
-<div class="elementor-row">
-<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-484697d" data-id="484697d" data-element_type="column">
-<div class="elementor-column-wrap elementor-element-populated">
-<div class="elementor-widget-wrap">
-
-
-<section class="elementor-section elementor-inner-section elementor-element elementor-element-2943bc4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2943bc4" data-element_type="section">
-<div class="elementor-container elementor-column-gap-no">
-<div class="c-post__content h-clearfix entry-content  entry-content--sidebar ">
-{!! $category->content !!}
-</div>
-</div>
-</section>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<style type="text/css">
-.entry-content h2{font-size: 22px;margin-top: 0px;margin-bottom: 0px;}
-.entry-content p{text-align: justify;}
-</style>
-
-</div>
-</div>
-</div>
-
 @endsection

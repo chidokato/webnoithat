@@ -1,24 +1,30 @@
+<?php use App\category; ?>
 <header class="pc-header uk-visible-large">
     <div class="uk-sticky-placeholder">
     	<section class="lower uk-sticky-init uk-active" data-uk-sticky="{top: 0}">
 	        <div class="uk-container uk-container-center customer-container">
 	            <nav class="main-nav">
-	                <a class="logo" href="index.php">
+	                <a class="logo" href="{{asset('')}}">
 	                    <img src="data/themes/{{$head_logo->img}}">
 	                </a>
 	                <ul class="uk-navbar-nav uk-clearfix main-menu">
 	                    <li><a href="{{asset('')}}">Trang chủ</a></li>
 	                    @foreach($menu_top as $val)
-        				<li><a href="{{$val->slug}}">{{$val->name}}</a></li>
+                        <?php $sub_cats = category::where('parent', $val->id)->get(); ?>
+                        @if(count($sub_cats) == 0)
+                        <li><a href="{{$val->slug}}">{{$val->name}}</a></li>
+                        @else
+                        <li><a href="{{$val->slug}}">{{$val->name}}</a>
+                            <div class="dropdown-menu"> 
+                                <ul class="uk-list sub-menu">
+                                    @foreach($sub_cats as $sub_cat)
+                                    <li><a href="{{$sub_cat->slug}}">{{$sub_cat->name}}</a></li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </li>   
+                        @endif
         				@endforeach
-		                <!-- <li><a href="category-product.php">Dự án</a>
-		                	<div class="dropdown-menu"> 
-	                            <ul class="uk-list sub-menu">
-	                        		<li><a href="category-product.php">Dự án thi công</a></li>
-	                            </ul>
-	                        </div>
-		                </li> -->
-		                
 	                </ul>
 	            </nav><!-- .main-nav -->
 	        </div>

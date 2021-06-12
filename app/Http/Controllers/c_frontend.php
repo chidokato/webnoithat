@@ -9,40 +9,38 @@ use App\home;
 use App\slider;
 use App\images;
 use App\district;
-use App\mausac;
-use App\size;
 use Mail;
 
 class c_frontend extends Controller
 {
     function __construct()
     {
-        $head_logo = themes::where('id',1)->first();
-        $bannherhomes = themes::where('note',2)->first();
-        $head_logo_trang = themes::where('id',2)->first();
-        $slider = themes::where('note',1)->get();
+        $head_logo = themes::where('id',1)->first(); // logo
+        $head_logo_trang = themes::where('id',2)->first(); // logo
         $head_setting = setting::where('id',1)->first();
         $menu_top = category::wherein('sort_by',[1,2,3])->where('status','true')->where('parent', 0)->orderBy('view','asc')->get();
-        $mausac = mausac::all();
-        $size = size::orderBy('name','asc')->get();
 
         view()->share( [
             'head_logo'=>$head_logo,
-            'bannherhomes'=>$bannherhomes,
             'head_logo_trang'=>$head_logo_trang,
-            'slider'=>$slider,
             'head_setting'=>$head_setting,
             'menu_top'=>$menu_top,
-            'mausac'=>$mausac,
-            'size'=>$size,
         ]);
     }
 
     public function home()
     {
-        $articles = articles::orderBy('id','desc')->paginate(30);
+        $homes_category = category::where('parent','121')->get();
+        $section1 = themes::where('id',27)->first();
+        $section2 = themes::where('id',26)->first();
+        $section3 = themes::where('id',25)->first();
+        $slider = themes::where('note','slider')->get();
         return view('pages.home',[
-            'articles' => $articles,
+            'homes_category' => $homes_category,
+            'section1'=>$section1,
+            'section2'=>$section2,
+            'section3'=>$section3,
+            'slider'=>$slider,
         ]);
     }
 
@@ -77,8 +75,8 @@ class c_frontend extends Controller
     public function category($curl)
     {
         $category = category::where('slug',$curl)->first();
-        if ($curl=='gioi-thieu') { return view('pages.about',['category'=>$category]); }
-        if ($curl=='lien-he') { return view('pages.contact',['category'=>$category]); }
+        // if ($curl=='gioi-thieu') { return view('pages.about',['category'=>$category]); }
+        // if ($curl=='lien-he') { return view('pages.contact',['category'=>$category]); }
         
         $cates = category::where('parent', $category["id"])->get();
         $array = [$category["id"]];
@@ -90,15 +88,16 @@ class c_frontend extends Controller
             }
         }
         if ($category->sort_by == 1) {
-            $product = product::where('status','true')->whereIn('category_id',$array)->orderBy('id','desc')->paginate(24);
-            return view('pages.product',['category'=>$category, 'product'=>$product]);
+            $articles = articles::where('status','true')->whereIn('category_id',$array)->orderBy('id','desc')->paginate(24);
+            return view('pages.product',['category'=>$category, 'articles'=>$articles]);
         }
         if ($category->sort_by == 2) {
             $articles = articles::where('status','true')->whereIn('category_id',$array)->orderBy('id','desc')->paginate(15);
             return view('pages.news',['category'=>$category, 'articles'=>$articles]);
         }
         if ($category->sort_by == 3) {
-            return view('pages.singlepage',['category'=>$category]);
+            $sitebar_cat = category::where('parent','120')->get();
+            return view('pages.singlepage',['category'=>$category, 'sitebar_cat'=>$sitebar_cat]);
         }
         
     }
