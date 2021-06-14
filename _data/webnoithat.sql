@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 14, 2021 lúc 12:30 PM
--- Phiên bản máy phục vụ: 10.4.19-MariaDB
--- Phiên bản PHP: 7.3.28
+-- Thời gian đã tạo: Th6 14, 2021 lúc 06:28 PM
+-- Phiên bản máy phục vụ: 10.4.11-MariaDB
+-- Phiên bản PHP: 7.2.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -55,9 +55,13 @@ CREATE TABLE `articles` (
 
 INSERT INTO `articles` (`id`, `category_id`, `sub_category`, `user_id`, `seo_id`, `product_id`, `sort_by`, `sku`, `name`, `img`, `hits`, `hot`, `tag`, `status`, `content`, `detail`, `slug`, `created_at`, `updated_at`) VALUES
 (196, 123, NULL, 1, 74, NULL, '2', 'C6L1RFcx', 'Thành lập đội bóng công ty FC AEC Việt Nam', 'IMG_7778.jpg', 55, NULL, NULL, 'true', '<p>Nhằm n&acirc;ng cao tinh thần đo&agrave;n kết, sức khỏe cho c&aacute;c anh em trong c&ocirc;ng ty. AEC Việt Nam quyết t&acirc;m x&acirc;y dựng đội b&oacute;ng c&ocirc;ng ty (FC AEC Việt Nam) với th&agrave;nh phần cốt c&aacute;n l&agrave; đội tư vấn thiết kế v&agrave; đội sản xuất đồ gỗ.<br />\r\nTrận đầu ti&ecirc;n FC AEC Việt Nam giao lưu với đội FC H&agrave; Đ&ocirc;ng tr&ecirc;n s&acirc;n b&oacute;ng H&agrave; Cầu - H&agrave; Đ&ocirc;ng. Trận đấu kết th&uacute;c với tỷ số 4-3 nghi&ecirc;ng về FC AEC Việt Nam. Tuy mới th&agrave;nh lập nhưng c&aacute;c cầu thủ tỏ ra rất hợp &yacute; nhau, đội b&oacute;ng c&oacute; nhiều pha phối hợp rất nhuần nhuyễn v&agrave; nhiều miếng đ&aacute;nh l&agrave;m đội bạn bất ngờ. C&oacute; lẽ v&igrave; c&aacute;c cầu thủ ra mắt trận đầu n&ecirc;n ai lấy đều muốn thể hiện kỹ thuật c&aacute; nh&acirc;n v&agrave; sức khỏe của m&igrave;nh.</p>\r\n\r\n<p>Một số h&igrave;nh ảnh trong l&uacute;c khởi động trước khi v&agrave;o trận đấu của đội b&oacute;ng FC AEC Việt Nam.</p>\r\n\r\n<p>&nbsp;</p>', 'Nhằm nâng cao tinh thần đoàn kết, sức khỏe cho các anh em trong công ty. AEC Việt Nam quyết tâm xây dựng đội bóng công ty (FC AEC Việt Nam) với thành phần cốt cán là đội tư vấn thiết kế và đội sản xuất đồ gỗ.', 'thanh-lap-doi-bong-cong-ty-fc-aec-viet-nam', '2021-06-11 08:54:15', '2021-06-14 08:49:13'),
-(197, 124, NULL, 1, 75, NULL, '2', 'DlBpI7NT', 'Xu hướng tiên nghi và phong cách trong thiết kế nội thất chung cư', 'nang_cap_cho_cuoc_song_tien_nghi_va_hien_dai.jpg', 51, NULL, NULL, 'true', '<p><strong>Chung cư cao tầng kh&ocirc;ng chỉ thay đổi bộ mặt của th&agrave;nh phố, m&agrave; c&ograve;n thay đổi cả cuộc sống của c&aacute;c gia đ&igrave;nh. C&ugrave;ng 1&nbsp; số tiền bỏ ra để mua 1 miếng đất trong ng&otilde; x&acirc;y nh&agrave; bạn ho&agrave;n to&agrave;n c&oacute; thể mua được 1 căn chung cư cao cấp nằm tại trung t&acirc;m, đi k&egrave;m l&agrave; v&ocirc; số tiện &iacute;ch phục vụ cho 1 cuộc sống tiện nghi v&agrave; hiện đại.</strong></p>\r\n\r\n<p>Căn hộ c&oacute; tổng diện t&iacute;ch hơn 80m2 của t&ograve;a nh&agrave; Sunrise City đ&atilde; được b&agrave;n giao theo g&oacute;i ho&agrave;n thiện cơ bản cho cặp vợ chồng trẻ mới c&oacute; 1 cậu con trai. C&ocirc;ng việc c&ograve;n lại của kiến tr&uacute;c sư l&agrave; tạo ra một kh&ocirc;ng gian sống tiện nghi v&agrave; c&oacute; t&iacute;nh thẩm mỹ cao cho gia đ&igrave;nh nhỏ.</p>\r\n\r\n<p>Chủ nh&agrave; muốn c&oacute; c&oacute; 1 kh&ocirc;ng gian mang phong c&aacute;ch hiện đại, ph&ugrave; hợp với lối sống th&agrave;nh thị, ch&uacute; trọng đến c&ocirc;ng năng v&agrave; t&iacute;nh tiện dụng. V&igrave; Kiến tr&uacute;c sư đưa ra thiết kế với tiện nghi vừa đủ nhưng khai th&aacute;c triệt để c&aacute;c kh&ocirc;ng gian của căn hộ. Ti&ecirc;u ch&iacute; h&agrave;i h&ograve;a, ph&ugrave; hợp được đặt l&ecirc;n h&agrave;ng đầu. Tr&ecirc;n tinh thần đ&oacute;, c&aacute;c kh&ocirc;ng gian chức năng c&oacute; sẵn hầu như được giữ nguy&ecirc;n vẹn. S&agrave;n nh&agrave; sử dụng gạch men b&oacute;ng k&iacute;nh tạo cảm gi&aacute;c tho&aacute;ng, s&aacute;ng v&agrave; sạch sẽ. Những diện cửa sổ k&iacute;nh lớn mang lại rất nhiều &aacute;nh s&aacute;ng v&agrave; sự tho&aacute;ng m&aacute;t cho căn hộ. Những diện cửa sổ đ&oacute; được che chắn bởi lớp r&egrave;m c&oacute; m&agrave;u s&aacute;ng như m&agrave;u s&agrave;n, điều đ&oacute; tạo cho kh&ocirc;ng gian căn hộ c&oacute; cảm gi&aacute;c rộng hơn. Diện tường sau sofa v&agrave; b&agrave;n ăn d&aacute;n gương cũng l&agrave; thủ ph&aacute;p thiết kế gi&uacute;p căn hộ rộng hơn. Căn ph&ograve;ng như được nh&acirc;n đ&ocirc;i diện t&iacute;ch, nh&acirc;n đ&ocirc;i &aacute;nh s&aacute;ng. Đối nghịch với diện tường k&iacute;nh l&agrave; bức tường được thiết kế bằng những mảnh v&aacute;n &eacute;p c&oacute; k&iacute;ch thước tự do, tạo n&ecirc;n một bề mặt đầy chất cảm. B&agrave;n ăn v&agrave; sofa được bọc da m&agrave;u sẫm nổi bật tr&ecirc;n nền kh&ocirc;ng gian được trang tr&iacute; bằng những vật liệu s&aacute;ng m&agrave;u v&agrave; b&oacute;ng bảy. Điều đ&oacute; c&agrave;ng l&agrave;m t&ocirc;n vẻ đẹp của chất liệu da sang trọng v&agrave; đẳng cấp</p>\r\n\r\n<p>Mảng &nbsp;tường trang tr&iacute; bằng v&aacute;n &eacute;p v&ocirc; c&ugrave;ng độc đ&aacute;o, đồ nội thất c&oacute; t&ocirc;ng m&agrave;u n&acirc;u sẫm tạo sự ấm &aacute;p</p>', 'Chung cư cao tầng không chỉ thay đổi bộ mặt của thành phố, mà còn thay đổi cả cuộc sống của các gia đình. Cùng 1  số tiền bỏ ra để mua 1 miếng đất trong ngõ xây nhà bạn hoàn', 'xu-huong-tien-nghi-va-phong-cach-trong-thiet-ke-noi-that-chung-cu', '2021-06-11 09:06:46', '2021-06-14 08:49:16'),
+(197, 124, NULL, 1, 75, NULL, '2', 'DlBpI7NT', 'Xu hướng tiên nghi và phong cách trong thiết kế nội thất chung cư', 'nang_cap_cho_cuoc_song_tien_nghi_va_hien_dai.jpg', 52, NULL, NULL, 'true', '<p><strong>Chung cư cao tầng kh&ocirc;ng chỉ thay đổi bộ mặt của th&agrave;nh phố, m&agrave; c&ograve;n thay đổi cả cuộc sống của c&aacute;c gia đ&igrave;nh. C&ugrave;ng 1&nbsp; số tiền bỏ ra để mua 1 miếng đất trong ng&otilde; x&acirc;y nh&agrave; bạn ho&agrave;n to&agrave;n c&oacute; thể mua được 1 căn chung cư cao cấp nằm tại trung t&acirc;m, đi k&egrave;m l&agrave; v&ocirc; số tiện &iacute;ch phục vụ cho 1 cuộc sống tiện nghi v&agrave; hiện đại.</strong></p>\r\n\r\n<p>Căn hộ c&oacute; tổng diện t&iacute;ch hơn 80m2 của t&ograve;a nh&agrave; Sunrise City đ&atilde; được b&agrave;n giao theo g&oacute;i ho&agrave;n thiện cơ bản cho cặp vợ chồng trẻ mới c&oacute; 1 cậu con trai. C&ocirc;ng việc c&ograve;n lại của kiến tr&uacute;c sư l&agrave; tạo ra một kh&ocirc;ng gian sống tiện nghi v&agrave; c&oacute; t&iacute;nh thẩm mỹ cao cho gia đ&igrave;nh nhỏ.</p>\r\n\r\n<p>Chủ nh&agrave; muốn c&oacute; c&oacute; 1 kh&ocirc;ng gian mang phong c&aacute;ch hiện đại, ph&ugrave; hợp với lối sống th&agrave;nh thị, ch&uacute; trọng đến c&ocirc;ng năng v&agrave; t&iacute;nh tiện dụng. V&igrave; Kiến tr&uacute;c sư đưa ra thiết kế với tiện nghi vừa đủ nhưng khai th&aacute;c triệt để c&aacute;c kh&ocirc;ng gian của căn hộ. Ti&ecirc;u ch&iacute; h&agrave;i h&ograve;a, ph&ugrave; hợp được đặt l&ecirc;n h&agrave;ng đầu. Tr&ecirc;n tinh thần đ&oacute;, c&aacute;c kh&ocirc;ng gian chức năng c&oacute; sẵn hầu như được giữ nguy&ecirc;n vẹn. S&agrave;n nh&agrave; sử dụng gạch men b&oacute;ng k&iacute;nh tạo cảm gi&aacute;c tho&aacute;ng, s&aacute;ng v&agrave; sạch sẽ. Những diện cửa sổ k&iacute;nh lớn mang lại rất nhiều &aacute;nh s&aacute;ng v&agrave; sự tho&aacute;ng m&aacute;t cho căn hộ. Những diện cửa sổ đ&oacute; được che chắn bởi lớp r&egrave;m c&oacute; m&agrave;u s&aacute;ng như m&agrave;u s&agrave;n, điều đ&oacute; tạo cho kh&ocirc;ng gian căn hộ c&oacute; cảm gi&aacute;c rộng hơn. Diện tường sau sofa v&agrave; b&agrave;n ăn d&aacute;n gương cũng l&agrave; thủ ph&aacute;p thiết kế gi&uacute;p căn hộ rộng hơn. Căn ph&ograve;ng như được nh&acirc;n đ&ocirc;i diện t&iacute;ch, nh&acirc;n đ&ocirc;i &aacute;nh s&aacute;ng. Đối nghịch với diện tường k&iacute;nh l&agrave; bức tường được thiết kế bằng những mảnh v&aacute;n &eacute;p c&oacute; k&iacute;ch thước tự do, tạo n&ecirc;n một bề mặt đầy chất cảm. B&agrave;n ăn v&agrave; sofa được bọc da m&agrave;u sẫm nổi bật tr&ecirc;n nền kh&ocirc;ng gian được trang tr&iacute; bằng những vật liệu s&aacute;ng m&agrave;u v&agrave; b&oacute;ng bảy. Điều đ&oacute; c&agrave;ng l&agrave;m t&ocirc;n vẻ đẹp của chất liệu da sang trọng v&agrave; đẳng cấp</p>\r\n\r\n<p>Mảng &nbsp;tường trang tr&iacute; bằng v&aacute;n &eacute;p v&ocirc; c&ugrave;ng độc đ&aacute;o, đồ nội thất c&oacute; t&ocirc;ng m&agrave;u n&acirc;u sẫm tạo sự ấm &aacute;p</p>', 'Chung cư cao tầng không chỉ thay đổi bộ mặt của thành phố, mà còn thay đổi cả cuộc sống của các gia đình. Cùng 1  số tiền bỏ ra để mua 1 miếng đất trong ngõ xây nhà bạn hoàn', 'xu-huong-tien-nghi-va-phong-cach-trong-thiet-ke-noi-that-chung-cu', '2021-06-11 09:06:46', '2021-06-14 12:17:34'),
 (198, 124, NULL, 1, 76, NULL, '2', 'CWSpboEZ', 'Thiết kế nội thất chung cư theo phong cách hiện đại kết hợp vintage', 'nang_cap_cho_cuoc_song_tien_nghi_va_hien_dai5.jpg', 55, NULL, NULL, 'true', '<p>Sự tranh c&atilde;i về mức độ tiện nghi, kh&ocirc;ng gian sống hay chất lượng cuộc sống giữa căn hộ chung cư v&agrave; nh&agrave; dưới đất lu&ocirc;n l&agrave; một đề t&agrave;i mu&ocirc;n thủa, bất tận, kh&ocirc;ng c&oacute; hồi kết. Để thiết kế, b&agrave;i tr&iacute; một căn hộ tr&ecirc;n tầng cao được như biệt thự dưới đất kh&ocirc;ng phải l&agrave; kh&ocirc;ng thể. Thăm quan can hộ dưới đ&acirc;y bạn sẽ thấy được điều đ&oacute;</p>\r\n\r\n<p>Để thực hiện được việc n&agrave;y trước nhất ph&ograve;ng kh&aacute;ch bếp căn hộ của bạn phải c&oacute; diện t&iacute;ch rộng, kh&ocirc;ng gian được ph&acirc;n t&aacute;ch hợp l&yacute;, tận dụng tối đa lợi thế chiếm lĩnh khoảng kh&ocirc;ng của căn hộ tr&ecirc;n tầng cao. Việc lựa chọn phong c&aacute;ch thiết kế hiện đại , cổ điển hay t&acirc;n cổ điển kh&ocirc;ng phải l&agrave; vấn đề quan trọng khi bạn đạt được điều tr&ecirc;n. Ở đ&acirc;y thiết kế của kiến tr&uacute;c sư hướng tới ti&ecirc;u ch&iacute; đơn giản nhưng c&oacute; cảm x&uacute;c, ấm &aacute;p gần gũi v&agrave; sử dụng t&ocirc;ng m&agrave;u nhẹ nh&agrave;ng. Đặc biệt, căn hộ được bố tr&iacute; rất nhiều g&oacute;c trang tr&iacute; tủ kệ</p>', NULL, 'thiet-ke-noi-that-chung-cu-theo-phong-cach-hien-dai-ket-hop-vintage', '2021-06-11 09:18:29', '2021-06-14 08:49:14'),
-(199, 124, NULL, 1, 77, NULL, '2', '8Pvgh1Nv', 'Thiết kế nội thất chung cư tiện nghi và phong cách', 'nang_cap_cho_cuoc_song_tien_nghi_va_hien_dai7.jpg', 62, NULL, NULL, 'true', '<p>Trong thiết kế nội th&acirc;t chung cư thường th&igrave; c&aacute;c kh&ocirc;ng gian chức năng đ&atilde; được ph&acirc;n t&aacute;ch v&agrave; mặc định r&otilde; r&agrave;ng bởi c&aacute;c yếu tố kỹ thuật v&agrave; thiết kế chung của toa nh&agrave;. Với những căn hộ đ&atilde; ho&agrave;n thiện cơ bản th&igrave; m&agrave;u sơn tường, m&agrave;u s&agrave;n, kiểu d&aacute;ng trần đ&atilde; c&oacute; sẵn. N&ecirc;n c&ocirc;ng việc thiết kế nội thất sẽ tập trung đem lại sự tiện nghi v&agrave; tạo dựng phong c&aacute;ch th&ocirc;ng qua h&igrave;nh thức đồ nội thất hay c&aacute;c diện trang tr&iacute;.</p>\r\n\r\n<p>Căn hộ c&oacute; tổng diện t&iacute;ch 100m2, bao gồm kh&aacute;ch - bếp v&agrave; 3 ph&ograve;ng ngủ với 2 wc. C&oacute; thể thấy diện t&iacute;ch căn hộ kh&ocirc;ng lớn tuy nhi&ecirc;n việc lợi dụng c&aacute;c kh&ocirc;ng gian chung nhau kết hợp l&agrave;m kh&ocirc;ng gian giao th&ocirc;ng gi&uacute;p căn hộ kh&ocirc;ng c&oacute; nhiều kh&ocirc;ng gian thừa hay tường ngăn bất hợp l&yacute;. Khu vực sinh hoạt chung v&agrave; khu vực nghỉ ngơi được ph&acirc;n t&aacute;ch r&otilde; r&agrave;ng. Khuyết điểm duy nhất của căn hộ l&agrave; diện t&iacute;ch c&aacute;c ph&ograve;ng ngủ phụ tương đối nhỏ.</p>\r\n\r\n<p>Thiết kế chung mang đến một kh&ocirc;ng gian sống hiện đại, sang trọng, sử dụng gam m&agrave;u trầm ấm v&agrave; c&oacute; hơi hướng tinh thần &Aacute; Đ&ocirc;ng</p>', 'Trong thiết kế nội thât chung cư thường thì các không gian chức năng đã được phân tách và mặc định rõ ràng bởi các yếu tố kỹ thuật và thiết kế chung của toa nhà. Với những căn hộ đã hoàn', 'thiet-ke-noi-that-chung-cu-tien-nghi-va-phong-cach', '2021-06-11 09:22:14', '2021-06-14 08:49:12');
+(199, 124, NULL, 1, 77, NULL, '2', '8Pvgh1Nv', 'Thiết kế nội thất chung cư tiện nghi và phong cách', 'nang_cap_cho_cuoc_song_tien_nghi_va_hien_dai7.jpg', 65, NULL, NULL, 'true', '<p>Trong thiết kế nội th&acirc;t chung cư thường th&igrave; c&aacute;c kh&ocirc;ng gian chức năng đ&atilde; được ph&acirc;n t&aacute;ch v&agrave; mặc định r&otilde; r&agrave;ng bởi c&aacute;c yếu tố kỹ thuật v&agrave; thiết kế chung của toa nh&agrave;. Với những căn hộ đ&atilde; ho&agrave;n thiện cơ bản th&igrave; m&agrave;u sơn tường, m&agrave;u s&agrave;n, kiểu d&aacute;ng trần đ&atilde; c&oacute; sẵn. N&ecirc;n c&ocirc;ng việc thiết kế nội thất sẽ tập trung đem lại sự tiện nghi v&agrave; tạo dựng phong c&aacute;ch th&ocirc;ng qua h&igrave;nh thức đồ nội thất hay c&aacute;c diện trang tr&iacute;.</p>\r\n\r\n<p>Căn hộ c&oacute; tổng diện t&iacute;ch 100m2, bao gồm kh&aacute;ch - bếp v&agrave; 3 ph&ograve;ng ngủ với 2 wc. C&oacute; thể thấy diện t&iacute;ch căn hộ kh&ocirc;ng lớn tuy nhi&ecirc;n việc lợi dụng c&aacute;c kh&ocirc;ng gian chung nhau kết hợp l&agrave;m kh&ocirc;ng gian giao th&ocirc;ng gi&uacute;p căn hộ kh&ocirc;ng c&oacute; nhiều kh&ocirc;ng gian thừa hay tường ngăn bất hợp l&yacute;. Khu vực sinh hoạt chung v&agrave; khu vực nghỉ ngơi được ph&acirc;n t&aacute;ch r&otilde; r&agrave;ng. Khuyết điểm duy nhất của căn hộ l&agrave; diện t&iacute;ch c&aacute;c ph&ograve;ng ngủ phụ tương đối nhỏ.</p>\r\n\r\n<p>Thiết kế chung mang đến một kh&ocirc;ng gian sống hiện đại, sang trọng, sử dụng gam m&agrave;u trầm ấm v&agrave; c&oacute; hơi hướng tinh thần &Aacute; Đ&ocirc;ng</p>', 'Trong thiết kế nội thât chung cư thường thì các không gian chức năng đã được phân tách và mặc định rõ ràng bởi các yếu tố kỹ thuật và thiết kế chung của toa nhà. Với những căn hộ đã hoàn', 'thiet-ke-noi-that-chung-cu-tien-nghi-va-phong-cach', '2021-06-11 09:22:14', '2021-06-14 16:22:12'),
+(200, 126, NULL, 1, 82, 32, '1', '0vC6SrGa', 'Anh Tuấn - Ecopack', '1.jpg', 51, NULL, NULL, 'true', '<p>Với tinh thần thiết kế một kh&ocirc;ng gian sống sang trọng, đẳng cấp m&agrave; vẫn c&oacute; phần ấm c&uacute;ng, nội thất căn hộ Royal City được KTS Byzan lựa chọn thiết kế theo phong c&aacute;ch Hiện Đại v&agrave; ưu ti&ecirc;n c&aacute;c vật liệu c&oacute; t&iacute;nh b&oacute;ng. Kh&ocirc;ng gian nội thất 120m2 c&oacute; sự kết hợp của t&ocirc;ng m&agrave;u ghi sang trọng, m&agrave;u n&acirc;u trầm ấm v&agrave; m&agrave;u gold c&aacute; t&iacute;nh tạo n&ecirc;n n&eacute;t ri&ecirc;ng kh&oacute; nhầm lẫn với bất kỳ kh&ocirc;ng gian n&agrave;o kh&aacute;c.</p>', NULL, 'anh-tuan-ecopack', '2021-06-14 13:21:39', '2021-06-14 15:52:22'),
+(201, 126, NULL, 1, 83, 33, '1', 'U8vr9x4s', 'Chung cư HH Linh Đàm', '6zlC_1.jpg', 50, NULL, NULL, 'true', NULL, NULL, 'chung-cu-hh-linh-dam', '2021-06-14 14:40:39', '2021-06-14 14:40:39'),
+(202, 126, NULL, 1, 84, 34, '1', 'Z4A8W4Iq', 'Anh Lợi - Bắc Hà Tower', '3.jpg', 51, NULL, NULL, 'true', '<p>Mẫu thiết kế sử dụng t&ocirc;ng m&agrave;u chủ đạo l&agrave; m&agrave;u x&aacute;m, được nhấn bằng c&aacute;c chi tiết m&agrave;u xanh độc đ&aacute;o v&agrave; ấn tượng.</p>', NULL, 'anh-loi-bac-ha-tower', '2021-06-14 14:41:24', '2021-06-14 15:02:10'),
+(203, 126, NULL, 1, 85, 35, '1', 'jYdiVZH3', 'Căn hộ chung cư viện 103 Văn Quán - Hà Đông', '4.jpg', 50, NULL, NULL, 'true', '<p>Một &yacute; tưởng t&aacute;o bạo khi đưa gạch trần v&agrave;o trong thiết kế. Chất liệu th&ocirc; mộc ấy kết hợp với sự b&oacute;ng bảy của những m&oacute;n đồ nội thất cao cấp tạo n&ecirc;n sự tương phản v&agrave; tương hỗ cho nhau.</p>', NULL, 'can-ho-chung-cu-vien-103-van-quan-ha-dong', '2021-06-14 14:41:45', '2021-06-14 14:41:45');
 
 -- --------------------------------------------------------
 
@@ -982,6 +986,18 @@ CREATE TABLE `images` (
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `images`
+--
+
+INSERT INTO `images` (`id`, `articles_id`, `img`, `name`, `created_at`, `updated_at`) VALUES
+(71, 200, '2.jpg', NULL, '2021-06-14 14:28:44', '2021-06-14 14:28:44'),
+(72, 200, '3.jpg', NULL, '2021-06-14 14:28:44', '2021-06-14 14:28:44'),
+(73, 200, '4.jpg', NULL, '2021-06-14 14:28:45', '2021-06-14 14:28:45'),
+(74, 201, 'Q8Aj_2.jpg', NULL, '2021-06-14 14:40:40', '2021-06-14 14:40:40'),
+(75, 201, 'Jcy7_3.jpg', NULL, '2021-06-14 14:40:41', '2021-06-14 14:40:41'),
+(76, 201, 'E6e2_4.jpg', NULL, '2021-06-14 14:40:41', '2021-06-14 14:40:41');
+
 -- --------------------------------------------------------
 
 --
@@ -1105,6 +1121,16 @@ CREATE TABLE `product` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `product`
+--
+
+INSERT INTO `product` (`id`, `mausac_id`, `price`, `oldprice`, `saleoff`, `number`, `created_at`, `updated_at`) VALUES
+(32, '', NULL, NULL, NULL, NULL, '2021-06-14 13:21:39', '2021-06-14 13:24:44'),
+(33, NULL, NULL, NULL, NULL, NULL, '2021-06-14 14:40:39', '2021-06-14 14:40:39'),
+(34, NULL, NULL, NULL, NULL, NULL, '2021-06-14 14:41:23', '2021-06-14 14:41:23'),
+(35, NULL, NULL, NULL, NULL, NULL, '2021-06-14 14:41:44', '2021-06-14 14:41:44');
 
 -- --------------------------------------------------------
 
@@ -1265,6 +1291,7 @@ INSERT INTO `quanlykho` (`id`, `articles_id`, `mausac_id`, `form_id`, `size`, `t
 
 CREATE TABLE `section` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
   `name` varchar(200) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `img` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -1272,6 +1299,20 @@ CREATE TABLE `section` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `section`
+--
+
+INSERT INTO `section` (`id`, `user_id`, `name`, `img`, `content`, `note`, `created_at`, `updated_at`) VALUES
+(1, 1, 'AEC - DẪN ĐẦU PHONG CÁCH HIỆN ĐẠI', '1.jpg', '<p>AEC JSC l&agrave; thương hiệu lớn v&agrave; uy t&iacute;n trong ng&agrave;nh thiết kế v&agrave; thi c&ocirc;ng nội thất, kh&aacute;c biệt với c&aacute;c đơn vị tr&ecirc;n thị trường l&agrave; AEC chỉ l&agrave;m một phong c&aacute;ch duy nhất l&agrave; Hiện Đại. Đồng thời l&agrave; đơn vị ti&ecirc;n phong tạo ra xu hướng trong phong c&aacute;ch hiện đại với những giải ph&aacute;p về ứng dụng vật liệu, m&agrave;u sắc v&agrave; mảng khối đồng nhất trong phong c&aacute;ch hiện đại. Với 10 năm kinh nghiệm, AEC hiện đang sở hữu nh&agrave; m&aacute;y sản xuất c&ugrave;ng quy tr&igrave;nh quản l&yacute; đạt chuẩn, đội ngũ được đ&agrave;o tạo b&agrave;i bản. Nhằm đ&aacute;p ứng nhu cầu kh&aacute;ch h&agrave;ng ng&agrave;y c&agrave;ng gia tăng tại c&aacute;c tỉnh th&agrave;nh trong cả nước, với mục ti&ecirc;u mở rộng v&agrave; cung cấp tốt nhất c&aacute;c dịch vụ tiện &iacute;ch cho kh&aacute;ch h&agrave;ng. AEC hiện l&agrave; đơn vị c&oacute; nhiều c&ocirc;ng tr&igrave;nh thi c&ocirc;ng nhất v&agrave; lu&ocirc;n cập nhật những h&igrave;nh ảnh thực tế gi&uacute;p kh&aacute;ch h&agrave;ng c&oacute; những đ&aacute;nh gi&aacute; kh&aacute;ch quan nhất về ch&uacute;ng t&ocirc;i</p>', NULL, '2021-06-14 11:51:42', '2021-06-14 11:57:56'),
+(2, 1, 'THIẾT KẾ NỘI THẤT PHONG CÁCH HIỆN ĐẠI', NULL, NULL, NULL, '2021-06-14 11:57:05', '2021-06-14 11:58:21'),
+(3, 1, 'DỰ ÁN THI CÔNG MỚI NHẤT', NULL, NULL, NULL, '2021-06-14 11:58:33', '2021-06-14 11:58:33'),
+(4, 1, 'TẠI SAO CHỌN AEC ?', NULL, '<p>Trong một thị trường nội thất ng&agrave;y c&agrave;ng s&ocirc;i động v&agrave; đa dạng như ở Việt Nam, AEC lu&ocirc;n tự h&agrave;o l&agrave; đơn vị dẫn đầu v&agrave; tạo ra xu hướng trong phong c&aacute;ch thiết kế Hiện Đại ( Theo tạp ch&iacute; kiến tr&uacute;c Việt Nam b&igrave;nh chọn ) c&aacute;c thiết kế của ch&uacute;ng t&ocirc;i lu&ocirc;n hướng đến sự h&agrave;i ho&agrave; giữa c&ocirc;ng năng sử dụng v&agrave; thẩm mỹ, với ng&ocirc;n ngữ thiết kế đồng nhất từ mảng khối cho đến m&agrave;u sắc sao cho mỗi kh&ocirc;ng gian sống lu&ocirc;n l&agrave; đứa con tinh thần, l&agrave; nơi m&agrave; bạn muốn trở về sau cuối ng&agrave;y l&agrave;m việc mệt mỏi.</p>', NULL, '2021-06-14 11:58:45', '2021-06-14 11:58:45'),
+(5, 1, '10 năm 1 phong cách', '100-NAM-KINH-NGHIEM.png', '<p>10 năm theo đuổi phong c&aacute;ch hiện đại, AEC khẳng định vị thế dẫn đầu trong trường ph&aacute;i n&agrave;y. Với &gt; 400 căn hộ được thiết kế &amp; thi c&ocirc;ng nội thất trọn g&oacute;i mỗi năm, ch&uacute;ng t&ocirc;i l&agrave; 1 trong những đơn vị uy t&iacute;n h&agrave;ng đầu miền Bắc</p>', '1', '2021-06-14 11:58:55', '2021-06-14 12:00:38'),
+(6, 1, 'Quy Trình Chặt Chẽ', 'QUY-TRINH-CHAT-CHE.png', '<p>Sỡ hữu Nh&agrave; m&aacute;y sản xuất rộng tr&ecirc;n 2000m2 c&ugrave;ng hệ thống kiểm so&aacute;t chất lượng chặt chẽ từ kh&acirc;u sản xuất đến dịch vụ, bạn c&oacute; thể ho&agrave;n to&agrave;n y&ecirc;n t&acirc;m khi sử dụng dịch vụ thiết kế - thi c&ocirc;ng trọn g&oacute;i của ch&uacute;ng t&ocirc;i</p>', '1', '2021-06-14 12:00:20', '2021-06-14 12:00:20'),
+(7, 1, 'Đề Cao Phong Thủy', 'icon-phong-thuy1.png', '<p>Phong thủy lu&ocirc;n l&agrave; yếu tố được c&acirc;n nhắc đầu ti&ecirc;n trong thiết kế nội thất hiện đại của Byzan, nhằm việc tạo kh&ocirc;ng gian sống ph&ugrave; hợp với tuổi, mệnh của gia chủ, gi&uacute;p hạn chế điềm xấu, t&agrave;i vận sinh s&ocirc;i</p>', '1', '2021-06-14 12:01:07', '2021-06-14 12:01:07'),
+(8, 1, 'Cam Kết Tiến Độ', 'CAM-KET-TIEN-DO-123.png', '<p>Byzan l&agrave; đơn vị duy nhất hiện nay cam kết nếu thời gian thi c&ocirc;ng căn hộ chậm tiến độ so với hợp đồng thi c&ocirc;ng th&igrave; sẽ chịu phạt tiến độ với mức phạt 1 triệu đồng/1 ng&agrave;y</p>', '1', '2021-06-14 12:01:34', '2021-06-14 12:01:34');
 
 -- --------------------------------------------------------
 
@@ -1309,7 +1350,11 @@ INSERT INTO `seo` (`id`, `title`, `description`, `keywords`, `robot`, `created_a
 (78, NULL, NULL, NULL, 'index, follow', '2021-06-11 21:56:56', '2021-06-11 21:56:56'),
 (79, NULL, NULL, NULL, 'index, follow', '2021-06-11 21:57:08', '2021-06-11 21:57:08'),
 (80, NULL, NULL, NULL, 'index, follow', '2021-06-11 21:59:34', '2021-06-11 21:59:34'),
-(81, NULL, NULL, NULL, 'index, follow', '2021-06-11 22:00:09', '2021-06-11 22:00:09');
+(81, NULL, NULL, NULL, 'index, follow', '2021-06-11 22:00:09', '2021-06-11 22:00:09'),
+(82, 'ádasdasd', NULL, NULL, 'index, follow', '2021-06-14 06:21:39', '2021-06-14 07:10:27'),
+(83, NULL, NULL, NULL, 'index, follow', '2021-06-14 07:40:39', '2021-06-14 07:40:39'),
+(84, NULL, NULL, NULL, 'index, follow', '2021-06-14 07:41:23', '2021-06-14 07:41:23'),
+(85, NULL, NULL, NULL, 'index, follow', '2021-06-14 07:41:44', '2021-06-14 07:41:44');
 
 -- --------------------------------------------------------
 
@@ -44668,7 +44713,7 @@ ALTER TABLE `ward`
 -- AUTO_INCREMENT cho bảng `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
 
 --
 -- AUTO_INCREMENT cho bảng `banhang`
@@ -44716,7 +44761,7 @@ ALTER TABLE `form`
 -- AUTO_INCREMENT cho bảng `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT cho bảng `mausac`
@@ -44740,7 +44785,7 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT cho bảng `province`
@@ -44758,13 +44803,13 @@ ALTER TABLE `quanlykho`
 -- AUTO_INCREMENT cho bảng `section`
 --
 ALTER TABLE `section`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `seo`
 --
 ALTER TABLE `seo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
 
 --
 -- AUTO_INCREMENT cho bảng `setting`

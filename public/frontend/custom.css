@@ -38,7 +38,7 @@
 .mb-30{margin-bottom: 30px}
 .bgf1f1f1{background-color: #f1f1f1;}
 .iteam-why{
-  padding: 20px; background-color: #fff;
+  padding: 20px; background-color: #fff;margin-bottom: 20px !important;
 }
 .iteam-why p{
   text-align: justify;font-size: 1.3rem;
@@ -133,3 +133,43 @@
 .news .img-cover img{height: 57px;}
 .news .infor{padding: 10px;}
 .prd-detail .call-groups .btn {padding: 20px 20px 20px 90px;}
+.prd-detail .call-groups .btn .text span {
+    font-size: 1.7rem;
+}
+
+
+
+@media (max-width: 500px){
+  .customer-container {
+    width: 100%;
+}.uk-container {
+    max-width: 100%;
+}.section1 {
+    padding-bottom: 20;
+    padding-top: 0;background: #fff;
+}.home-title .separator_wrapper {
+    font-size: 1.3rem;}.section2 {
+    padding-bottom: 20px;}.section3 {
+    background: #fff;
+}.section3 {
+    padding-bottom: 30px;}.home-contact input {
+    width: 80%;}.mobile-header .upper {
+    background: #040404;}.logo img {
+    height: 25px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

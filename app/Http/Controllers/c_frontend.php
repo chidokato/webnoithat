@@ -39,10 +39,12 @@ class c_frontend extends Controller
         $homes_category = category::where('parent','121')->get();
         $sections = section::orderBy('id','asc')->get();
         $slider = themes::where('note','slider')->get();
+        $homes_articles = articles::where('sort_by',1)->where('status','true')->orderBy('hits','desc')->paginate(10);
         return view('pages.home',[
             'homes_category' => $homes_category,
             'sections'=>$sections,
             'slider'=>$slider,
+            'homes_articles'=>$homes_articles,
         ]);
     }
 

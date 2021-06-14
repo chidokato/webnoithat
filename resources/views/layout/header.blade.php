@@ -37,7 +37,7 @@
         <a class="moblie-menu-btn skin-1" href="#offcanvas" data-uk-offcanvas="{target:'#offcanvas'}">
             <span>Menu</span>
         </a>
-        <div class="logo"><a href="#" title="Logo"><img src="uploads/images/he-thong/logo.png" alt="Logo"></a></div>
+        <div class="logo"><a href="#" title="Logo"><img src="data/themes/{{$head_logo->img}}" alt="Logo"></a></div>
         <a class="mobile-hotline" href="tel: 0911388799" title="Hotline">
             <span class="label">Hotline: </span>
             <span class="value">0911388799</span>
@@ -53,3 +53,4 @@
         </div>
     </section>
 </header>
+

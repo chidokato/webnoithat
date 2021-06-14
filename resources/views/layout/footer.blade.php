@@ -94,15 +94,39 @@
 		</div>
 	</section><!-- .lower -->
 </footer>
+<?php use App\category; ?>
+<div id="offcanvas" class="uk-offcanvas offcanvas">
+	<div class="uk-offcanvas-bar">
+		<form class="uk-search" action="" data-uk-search="{}">
+		    <input class="uk-search-field" type="search" name="keyword" placeholder="Tìm kiếm...">
+        </form>
+		<ul class="l1 uk-nav uk-nav-offcanvas uk-nav uk-nav-parent-icon" data-uk-nav>
+			<li>
+				<a href="{{asset('')}}">Trang chủ</a>
+			</li>
+			@foreach($menu_top as $val)
+            <?php $sub_cats = category::where('parent', $val->id)->get(); ?>
+            @if(count($sub_cats) == 0)
+            <li><a href="{{$val->slug}}">{{$val->name}}</a></li>
+            @else
+            <li><a href="{{$val->slug}}">{{$val->name}}</a>
+                <div class="dropdown-menu"> 
+                    <ul class="uk-list sub-menu">
+                        @foreach($sub_cats as $sub_cat)
+                        <li><a href="{{$sub_cat->slug}}">{{$sub_cat->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
+            </li>   
+            @endif
+			@endforeach
+			<li>
+				<a href="lien-he">Liên hệ</a>
+			</li>
+		</ul>
+	</div>
+</div><!-- #offcanvas -->	
 
-<div class="hotline-fixed uk-hidden-large">
-	<a href="tel: 0911388799" title="Hotline">
-		<span class="label">Hotline: </span>
-		<span class="value">0911388799</span>
-	</a>
-</div>
-
-<script src="frontend/function.js"></script>
 
 <script src="frontend/uikit/js/components/slideshow.min.js"></script>
 <script src="frontend/uikit/js/components/slider.min.js"></script>
@@ -112,19 +136,38 @@
 <script src="frontend/plugins/Readmore/readmore.min.js"></script>
 <script src="frontend/plugins/lightslider-master/dist/js/lightslider.min.js"></script>
 <script src="frontend/library/js/library.js"></script>
-<script src="templates/acore/function.js" type="text/javascript"></script>
+<script src="frontend/acore/function.js" type="text/javascript"></script>
 
 <div id="modal-cart" class="uk-modal">
 	<div class="uk-modal-dialog" style="width:768px;">
 		<a class="uk-modal-close uk-close"></a>
 		<div class="cart-content">
-
+		
 		</div>
 	</div>
 </div>
+
 <div id="modal-alert" class="uk-modal">
 	<div class="uk-modal-dialog uk-modal-dialog-small">
 	   <a class="uk-modal-close uk-close"></a>
 		<div class="alert-content"></div>
 	</div>
 </div>
+
+<script src="apis.google.com/js/platform.js" async defer>{lang: 'vi'}</script>
+
+<!-- hotline -->
+<div class="phonering-alo-phone phonering-alo-green phonering-alo-show" id="phonering-alo-phoneIcon" style="left: -50px; bottom: 150px; position: fixed;">
+ <div class="phonering-alo-ph-circle"></div>
+ <div class="phonering-alo-ph-circle-fill"></div>
+ <a href="tel:{{$head_setting->hotline}}"></a>
+ <div class="phonering-alo-ph-img-circle">
+ <a href="tel:{{$head_setting->hotline}}"></a>
+ <a href="tel:{{$head_setting->hotline}}" class="pps-btn-img " title="Liên hệ">
+ <img src="https://i.imgur.com/v8TniL3.png" alt="Liên hệ" width="50" onmouseover="this.src='https://i.imgur.com/v8TniL3.png';" onmouseout="this.src='https://i.imgur.com/v8TniL3.png';">
+ </a>
+ </div>
+</div>
+<a href="tel:{{$head_setting->hotline}}">
+ <span class="hotline_custom"><strong>{{$head_setting->hotline}}</strong></span></a>
+

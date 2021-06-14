@@ -6,14 +6,14 @@
 		</div>
 
 		<div class="uk-grid mb-30">
-			<div class="uk-width-large-1-1 uk-visible-large about-content">
+			<div class="uk-width-large-1-1  about-content">
 				{!! $bottom_sections1->content !!}
 			</div>
 		</div>
 
-		<div class="uk-grid ">
+		<div class=" uk-grid lib-grid-20 uk-grid-width-1-2 uk-grid-width-medium-1-4 uk-grid-width-large-1-4">
 			@foreach($bottom_sections as $val)
-			<div class="uk-width-large-1-4 uk-visible-large div-room">
+			<div class=" div-room">
 				<div class="iteam-why">
 					<img src="data/section/300/{{$val->img}}">
 					<h4>{{$val->name}}</h4>
@@ -28,7 +28,7 @@
 <section class="section5">
 	<div class="uk-container uk-container-center customer-container">
 		<div class="uk-grid mb-30">
-			<div class="uk-width-large-1-1 uk-visible-large home-contact">
+			<div class="uk-width-large-1-1  home-contact">
 				<h3>NHẬN TƯ VẤN MIỄN PHÍ</h3>
 				<div class="note">Tặng kèm Ebook 39 mẫu Thiết kế nội thất mới nhất 2019 trị giá 19$</div>
 				<form action="" method="post" class="form">
