@@ -130,3 +130,6 @@
 .artcatalogue .article .description {font-size: 1.3rem;line-height: 25px;}
 .artcatalogue .article .meta{font-size: 1.1rem;margin: 13px 0px;}
 .list a{font-size: 1.2rem}
+.news .img-cover img{height: 57px;}
+.news .infor{padding: 10px;}
+.prd-detail .call-groups .btn {padding: 20px 20px 20px 90px;}

@@ -325,14 +325,14 @@
 	.heading-2 {
 		margin: 0 0 15px 0;
 		padding-bottom: 10px;
-		border-bottom: 1px solid #6a0b0c;
+		border-bottom: 1px solid #040404;
 		line-height: 24px;
 		font-size: 18px;
 		font-weight: normal;
 		font-family: 'UTM AVo Bold', sans-serif;
 		text-transform: uppercase;
 	}
-	.heading-2>* {color: #6a0b0c;}
+	.heading-2>* {color: #040404;}
 
 
 	@media (min-width: 960px) {
@@ -388,7 +388,7 @@
 	}
 	.aside-categories .main li a:hover {
 		margin-left: 10px;
-		color: #6a0b0c;
+		color: #040404;
 	}
 	.aside-product .list-product>li:not(:last-child), .aside-news .list-article>li:not(:last-child) {margin-bottom: 10px;}
 	.aside-product .product .thumb,
@@ -424,12 +424,12 @@
 	}
 	.aside-product .product .title a:hover, 
 	.aside-news .article .title a:hover {
-		color: #6a0b0c;
+		color: #040404;
 	}
 	.aside-prd-detail .heading {
 		margin: 0;
 		padding: 10px 10px 10px 15px;
-		background: #6a0b0c;
+		background: #040404;
 		font-size: 13px;
 		font-weight: normal;
 		font-family: 'UTM Avo Bold', sans-serif;
@@ -1693,7 +1693,7 @@
 		position: relative;
 		padding: 10px 20px 10px 90px;
 		margin-bottom: 20px;
-		background: #6a0b0c url(img/icon_phone.png) 25px 50% no-repeat;
+		background: #040404 url(img/icon_phone.png) 25px 50% no-repeat;
 		color: #fff;
 		font-size: 16px;
 		line-height: 22px;
@@ -1837,7 +1837,7 @@
 		font-size: 20px;
 		line-height:24px;
 		font-weight: bold;
-		color: #6a0b0c;
+		color: #040404;
 	}
 	.art-detail .description {
 		margin: 0 0 10px 0;

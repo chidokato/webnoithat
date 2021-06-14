@@ -92,15 +92,6 @@
                     </style>
                 </div>
 
-                <div class="form-group">
-                    <label>Màu sắc</label>
-                    <select name='mausac[]' class="form-control select2" multiple="">
-                        @foreach($mausac as $val)
-                        <option <?php if(isset($data) && in_array($val->id, explode(',',$data->product->mausac_id))){echo 'selected';} ?> value="{{$val->id}}">{{$val->name}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                
                 <!-- <div class="form-group">
                     <label>Number</label>
                     <input value="{{ isset($data->product->number) ? $data->product->number : '' }}" type="text" name="number" class="form-control" placeholder="...">
@@ -138,6 +129,7 @@
             <div class="card-body">
                 <div class="form-group">
                     <input type="file" name="imgdetail[]" multiple class="form-control">
+                    <p><i>Có thể chọn nhiều ảnh ...</i></p>
                 </div>
             </div>
         </div>

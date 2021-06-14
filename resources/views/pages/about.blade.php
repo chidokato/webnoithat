@@ -61,16 +61,18 @@
 			                </header>
 			                <section class="panel-body">
 			                    <ul class="uk-list list-product">
-			                        <li>
-			                            <div class="product uk-clearfix">
-			                                <div class="thumb">
-			                                    <a class="image img-cover" href="tin-tuc-bds/xu-huong-dan-noi-thanh-di-cu-sang-quan-long-bien-an-cu-lac-nghiep-/94.html" title="Xu hướng dân nội thành di cư sang Quận Long Biên “an cư lạc nghiệp”"><img src="data/news/80-60/Hai bờ sông Hồng.jpg" alt="Xu hướng dân nội thành di cư sang Quận Long Biên “an cư lạc nghiệp”"></a>
-			                                </div>
-			                                <div class="infor">
-			                                    <h4 class="title"><a href="tin-tuc-bds/xu-huong-dan-noi-thanh-di-cu-sang-quan-long-bien-an-cu-lac-nghiep-/94.html" title="Xu hướng dân nội thành di cư sang Quận Long Biên “an cư lạc nghiệp”">Xu hướng dân nội thành di cư sang Quận Long Biên “an cư lạc nghiệp”</a></h4>
-			                                </div>
-			                            </div>
-			                        </li>
+			                        @foreach($news_hits as $val)
+					                  <li>
+					                      <div class="product news uk-clearfix">
+					                          <div class="thumb">
+					                              <a class="image img-cover" href="{{$val->category->slug}}/{{$val->slug}}" ><img src="data/news/80/{{$val->img}}" alt="{{$val->name}}"></a>
+					                          </div>
+					                          <div class="infor">
+					                              <h4 class="title"><a href="{{$val->category->slug}}/{{$val->slug}}" >{{$val->name}}</a></h4>
+					                          </div>
+					                      </div>
+					                  </li>
+					                  @endforeach
 			                    </ul>
 			                </section>
 			            </section><!-- .aside-panel -->

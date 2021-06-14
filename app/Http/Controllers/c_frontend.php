@@ -19,12 +19,14 @@ class c_frontend extends Controller
         $head_logo_trang = themes::where('id',2)->first(); // logo
         $head_setting = setting::where('id',1)->first();
         $menu_top = category::wherein('sort_by',[1,2,3])->where('status','true')->where('parent', 0)->orderBy('view','asc')->get();
+        $news_hits = articles::where('status','true')->orderBy('hits','desc')->paginate(10);
 
         view()->share( [
             'head_logo'=>$head_logo,
             'head_logo_trang'=>$head_logo_trang,
             'head_setting'=>$head_setting,
             'menu_top'=>$menu_top,
+            'news_hits'=>$news_hits,
         ]);
     }
 
