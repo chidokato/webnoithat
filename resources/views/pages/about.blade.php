@@ -45,37 +45,7 @@
 			    </div><!-- .uk-width-larg-3-4 -->
 			    <div class="uk-width-large-1-4 uk-visible-large">
 			        <aside class="aside">
-			            <section class="aside-prd-detail">
-			                <header class="panel-head">
-			                    <a href="location/ha-noi"><h3 class="heading"><span>Giới thiệu</span></h3></a>
-			                </header>
-			                <section class="panel-body">
-			                    <ul class="uk-list list">
-			                        <li style="padding: 5px; border-bottom: dashed 1px #ddd;"><a href="location/ha-noi/quan-ba-dinh">Quận Ba Đình</a></li>
-			                    </ul>
-			                </section>
-			            </section><!-- .aside-prd-detail -->
-			            <section class="aside-prd-detail aside-product">
-			                <header class="panel-head">
-			                    <h3 class="heading"><span>Tin tức mới nhất</span></h3>
-			                </header>
-			                <section class="panel-body">
-			                    <ul class="uk-list list-product">
-			                        @foreach($news_hits as $val)
-					                  <li>
-					                      <div class="product news uk-clearfix">
-					                          <div class="thumb">
-					                              <a class="image img-cover" href="{{$val->category->slug}}/{{$val->slug}}" ><img src="data/news/80/{{$val->img}}" alt="{{$val->name}}"></a>
-					                          </div>
-					                          <div class="infor">
-					                              <h4 class="title"><a href="{{$val->category->slug}}/{{$val->slug}}" >{{$val->name}}</a></h4>
-					                          </div>
-					                      </div>
-					                  </li>
-					                  @endforeach
-			                    </ul>
-			                </section>
-			            </section><!-- .aside-panel -->
+			            @include('layout.sidebar') 
 			        </aside>
 			    </div>        
 			</div>

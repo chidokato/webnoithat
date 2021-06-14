@@ -49,12 +49,9 @@
                             </th>
                             <th></th>
                             <th>Name</th>
-                            <th>Category</th>
+                            <th>Note</th>
                             <th>User</th>
                             <th>Date</th>
-                            <th>Status</th>
-                            <th>Hot</th>
-                            <th>View</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -65,24 +62,19 @@
                                 <input type="checkbox" value="{{$val->id}}">
                             </td>
                             <td>
-                                {!! isset($val->img) ? '<img style="width: 48px; height: 48px; object-fit: cover;" src="data/section/80/'.$val->img.'" class="thumbnail-img align-self-center" alt="" />' : '' !!}
+                                {!! isset($val->img) ? '<img style="width: 48px; height: 48px; object-fit: cover;" src="data/section/300/'.$val->img.'" class="thumbnail-img align-self-center" alt="" />' : '' !!}
                             </td>
                             <td>
                                 {{$val->name}}
                             </td>
-                            <td class="pt24px">{{ isset($val->category->name) ? $val->category->name : '' }}</td>
+                            <td class="pt24px">{{ $val->note}}</td>
                             <td class="pt24px">{{ isset($val->user->name) ? $val->user->name : '' }}</td>
                             <td>
                                 {{date('d/m/Y',strtotime($val->updated_at))}} <br> <i style="font-size: 14px">{{date('d/m/Y',strtotime($val->created_at))}}</i>
                             </td>
-                            <td class="pt24px">
-                                <input type="checkbox" <?php if($val->status == 'true'){echo "checked";} ?> >
-                            </td>
-                            <td class="pt24px">22</td>
-                            <td class="pt24px"></td>
                             <td class="d-flex pt24px">
-                                <a target="_blank" href="{{asset('')}}" class="mr-2"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="admin/section/double/{{$val->id}}" class="mr-2"><i class="far fa-copy"></i></a>
+                                <!-- <a target="_blank" href="{{asset('')}}" class="mr-2"><i class="fas fa-external-link-alt"></i></a> -->
+                                <!-- <a href="admin/section/double/{{$val->id}}" class="mr-2"><i class="far fa-copy"></i></a> -->
                                 <a href="admin/section/edit/{{$val->id}}" class="mr-2"><i class="fas fa-edit" aria-hidden="true"></i></a>
                                 <a href="admin/section/delete/{{$val->id}}"><i class="fas fa-trash-alt"></i></a>
                             </td>

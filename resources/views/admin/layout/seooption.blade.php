@@ -7,13 +7,13 @@
             <div class="col-md-12">
                 <div class="form-group ">
                     <label>Title</label>
-                    <input value="{{ isset($seo) ? $seo->title : '' }}" id="title" onkeyup="changetitle(this);" name='title' type="text" placeholder="70 characters left" class="form-control ">
+                    <input value="{{ isset($seo) ? $seo->title : '' }}" id="seo_title" onkeyup="changetitle(this);" name='title' type="text" placeholder="70 characters left" class="form-control ">
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="form-group ">
                     <label >Description</label>
-                    <input value="{{ isset($seo) ? $seo->description : '' }}" id="description" onkeyup="change(this);" name='description' type="text" placeholder="170 characters left" class="form-control ">
+                    <input value="{{ isset($seo) ? $seo->description : '' }}" id="seo_description" onkeyup="changedescription(this);" name='description' type="text" placeholder="170 characters left" class="form-control ">
                 </div>
             </div>
             <div class="col-lg-9">
@@ -36,9 +36,9 @@
     <div class="card-body seo">
         <div class="row">
             <div class="col-md-6">
-                <div class="seo-title"></div>
-                <div class="seo-link">{{asset('')}} <span class='fa fa-caret-down'></span></div>
-                <div class="seo-description"></div>
+                <div class="seo_title"></div>
+                <div class="seo_link">{{asset('')}} <span class='fa fa-caret-down'></span></div>
+                <div class="seo_description"></div>
             </div>
         </div>
     </div>

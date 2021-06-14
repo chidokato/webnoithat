@@ -9,6 +9,7 @@ use App\home;
 use App\slider;
 use App\images;
 use App\district;
+use App\section;
 use Mail;
 
 class c_frontend extends Controller
@@ -19,29 +20,28 @@ class c_frontend extends Controller
         $head_logo_trang = themes::where('id',2)->first(); // logo
         $head_setting = setting::where('id',1)->first();
         $menu_top = category::wherein('sort_by',[1,2,3])->where('status','true')->where('parent', 0)->orderBy('view','asc')->get();
-        $news_hits = articles::where('status','true')->orderBy('hits','desc')->paginate(10);
-
+        $news_hits = articles::where('sort_by',2)->where('status','true')->orderBy('hits','desc')->paginate(10);
+        $bottom_sections = section::where('note',1)->orderBy('id','asc')->get();
+        $bottom_sections1 = section::where('id',4)->first();
         view()->share( [
             'head_logo'=>$head_logo,
             'head_logo_trang'=>$head_logo_trang,
             'head_setting'=>$head_setting,
             'menu_top'=>$menu_top,
             'news_hits'=>$news_hits,
+            'bottom_sections'=>$bottom_sections,
+            'bottom_sections1'=>$bottom_sections1,
         ]);
     }
 
     public function home()
     {
         $homes_category = category::where('parent','121')->get();
-        $section1 = themes::where('id',27)->first();
-        $section2 = themes::where('id',26)->first();
-        $section3 = themes::where('id',25)->first();
+        $sections = section::orderBy('id','asc')->get();
         $slider = themes::where('note','slider')->get();
         return view('pages.home',[
             'homes_category' => $homes_category,
-            'section1'=>$section1,
-            'section2'=>$section2,
-            'section3'=>$section3,
+            'sections'=>$sections,
             'slider'=>$slider,
         ]);
     }

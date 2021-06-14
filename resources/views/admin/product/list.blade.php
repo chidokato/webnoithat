@@ -63,7 +63,7 @@
                                 <input type="checkbox" value="{{$val->id}}">
                             </td>
                             <td>
-                                {!! isset($val->img) ? '<img style="width: 48px; height: 48px; object-fit: cover;" src="data/product/80/'.$val->img.'" class="thumbnail-img align-self-center" alt="" />' : '' !!}
+                                {!! isset($val->img) ? '<img style="width: 48px; height: 48px; object-fit: cover;" src="data/product/100/'.$val->img.'" class="thumbnail-img align-self-center" alt="" />' : '' !!}
                             </td>
                             <td class="pt24px">
                                 {{$val->name}}

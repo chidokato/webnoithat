@@ -17,6 +17,17 @@ use App\channel;
 
 class c_ajax extends Controller
 {   
+    // all
+    public function delete_img($id)
+    {
+        $images = images::find($id);
+        if(File::exists('data/imgdetail/'.$images->img)) {
+            File::delete('data/imgdetail/'.$images->img);
+            File::delete('data/imgdetail/300/'.$images->img);
+        }
+        $images->delete();
+    }
+    // end all
     // category
     public function sortby($id)
     {

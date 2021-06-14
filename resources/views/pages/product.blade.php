@@ -25,16 +25,18 @@
 		</div>
 		<div class="uk-container uk-container-center">
 			<ul class="uk-grid lib-grid-20 uk-grid-width-1-2 uk-grid-width-medium-1-4 uk-grid-width-large-1-4 list-product" data-uk-grid-match="{target:'.title'}">
+				@foreach($articles as $val)
 			    <li>
 				    <div class="product">
 				        <div class="thumb">
-				            <a class="image img-cover img-shine" href="detail-product.php"><img src="data/3.jpg" alt="KHAI SƠN HILL"></a>
+				            <a class="image img-cover img-shine" href="{{$val->category->slug}}/{{$val->slug}}"><img src="data/product/300/{{$val->img}}" alt="{{$val->name}}"></a>
 				        </div>
 				        <div class="infor">
-				            <h3 class="title" style="min-height: 44px;"><a href="detail-product.php" title="KHAI SƠN HILL">Thiết Kế Nội Thất Chung Cư The Legacy – 110m2</a></h3>
+				            <h3 class="title" style="min-height: 44px;"><a href="{{$val->category->slug}}/{{$val->slug}}" >{{$val->name}}</a></h3>
 				        </div>
 				    </div>
 				</li>
+				@endforeach
 			</ul>
  			
  		</div>

@@ -27,14 +27,8 @@ class c_product extends Controller
     public function getadd()
     {
         $category = category::where('sort_by',1)->orderBy('id','desc')->get();
-        $mausac = mausac::orderBy('id','desc')->get();
-        $form = form::orderBy('id','desc')->get();
-        $size = size::orderBy('id','desc')->get();
         return view('admin.product.addedit',[
             'category'=>$category,
-            'mausac'=>$mausac,
-            'form'=>$form,
-            'size'=>$size,
         ]);
     }
 
@@ -60,7 +54,6 @@ class c_product extends Controller
         $articles = new articles;
         $articles->user_id = Auth::User()->id;
         $articles->category_id = $Request->category_id;
-        if(isset($Request->category_sku)){$articles->category_sku = implode(',', $Request->category_sku);}
         $articles->seo_id = $seo->id;
         $articles->product_id = $product->id;
         $articles->sort_by = '1';
@@ -76,9 +69,9 @@ class c_product extends Controller
             $file = $Request->file('img');
             $filename = $file->getClientOriginalName();
             while(file_exists("data/product/300/".$filename)){ $filename = str_random(4)."_".$filename; }
-            $img = Image::make($file)->resize(1000, 600, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/product/'.$filename));
+            $img = Image::make($file)->resize(1000, 800, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/product/'.$filename));
             $img = Image::make($file)->resize(300, 300, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/product/300/'.$filename));
-            $img = Image::make($file)->resize(80, 80, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/product/80/'.$filename));
+            $img = Image::make($file)->resize(100, 100, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/product/100/'.$filename));
             $articles->img = $filename;
         }
         $articles->save();
@@ -90,9 +83,9 @@ class c_product extends Controller
                 if(isset($file)){
                     $images->articles_id = $articles->id;
                     $filename = $file->getClientOriginalName();
-                    while(file_exists("data/images/".$filename)){ $filename = str_random(4)."_".$filename; }
-                    $img = Image::make($file)->resize(1000, 600, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/images/'.$filename));
-                    $img = Image::make($file)->resize(100, 80, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/images/100/'.$filename));
+                    while(file_exists("data/imgdetail/".$filename)){ $filename = str_random(4)."_".$filename; }
+                    $img = Image::make($file)->resize(1000, 800, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/imgdetail/'.$filename));
+                    $img = Image::make($file)->resize(300, 300, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/imgdetail/300/'.$filename));
                     $images->img = $filename;
                     $images->save();
                 }
@@ -107,16 +100,10 @@ class c_product extends Controller
         $data = articles::findOrFail($id);
         $seo = seo::findOrFail($data['seo_id']);
         $category = category::where('sort_by',1)->orderBy('id','desc')->get();
-        $mausac = mausac::orderBy('id','desc')->get();
-        $form = form::orderBy('id','desc')->get();
-        $size = size::orderBy('id','desc')->get();
         return view('admin.product.addedit',[
             'data'=>$data,
             'category'=>$category,
             'seo'=>$seo,
-            'mausac'=>$mausac,
-            'form'=>$form,
-            'size'=>$size,
         ]);
     }
 
@@ -129,8 +116,6 @@ class c_product extends Controller
         $articles->detail = $Request->detail;
         $articles->content = $Request->content;
         $articles->category_id = $Request->category_id;
-        if(isset($Request->category_sku)){$articles->category_sku = implode(',', $Request->category_sku);}
-        else{$articles->category_sku='';}
         if ($Request->hasFile('img')) {
             // xóa ảnh cũ
             if(File::exists('data/product/'.$articles->img)) { 
@@ -145,7 +130,7 @@ class c_product extends Controller
             while(file_exists("data/product/300/".$filename)){ $filename = str_random(4)."_".$filename; }
             $img = Image::make($file)->resize(1000, 800, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/product/'.$filename));
             $img = Image::make($file)->resize(300, 300, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/product/300/'.$filename));
-            $img = Image::make($file)->resize(80, 80, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/product/80/'.$filename));
+            $img = Image::make($file)->resize(100, 100, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/product/100/'.$filename));
             $articles->img = $filename;
             // thêm ảnh mới
         }
@@ -166,6 +151,22 @@ class c_product extends Controller
         if(isset($Request->mausac)){$product->mausac_id = implode(',', $Request->mausac);}
         else{$product->mausac_id='';}
         $product->save();
+
+        // images
+        if($Request->hasFile('imgdetail')){
+            foreach ($Request->file('imgdetail') as $file) {
+                $images = new images();
+                if(isset($file)){
+                    $images->articles_id = $articles->id;
+                    $filename = $file->getClientOriginalName();
+                    while(file_exists("data/imgdetail/".$filename)){ $filename = str_random(4)."_".$filename; }
+                    $img = Image::make($file)->resize(1000, 800, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/imgdetail/'.$filename));
+                    $img = Image::make($file)->resize(300, 300, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/imgdetail/300/'.$filename));
+                    $images->img = $filename;
+                    $images->save();
+                }
+            }
+        }
         
         return redirect('admin/product/edit/'.$id)->with('Alerts','Thành công');
     }

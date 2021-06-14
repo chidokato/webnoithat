@@ -1,48 +1,26 @@
 <section class="section4 bgf1f1f1">
 	<div class="uk-container uk-container-center customer-container">
 		<div class="home-title">
-			<span class="separator_wrapper">TẠI SAO CHỌN AEC ?</span>
+			<span class="separator_wrapper">{{$bottom_sections1->name}}</span>
 			<div class="line"></div>
 		</div>
 
 		<div class="uk-grid mb-30">
 			<div class="uk-width-large-1-1 uk-visible-large about-content">
-				<p>Trong một thị trường nội thất ngày càng sôi động và đa dạng như ở Việt Nam, AEC luôn tự hào là đơn vị dẫn đầu và tạo ra xu hướng trong phong cách thiết kế Hiện Đại ( Theo tạp chí kiến trúc Việt Nam bình chọn ) các thiết kế của chúng tôi luôn hướng đến sự hài hoà giữa công năng sử dụng và thẩm mỹ, với ngôn ngữ thiết kế đồng nhất từ mảng khối cho đến màu sắc sao cho mỗi không gian sống luôn là đứa con tinh thần, là nơi mà bạn muốn trở về sau cuối ngày làm việc mệt mỏi.</p>
+				{!! $bottom_sections1->content !!}
 			</div>
 		</div>
 
 		<div class="uk-grid ">
+			@foreach($bottom_sections as $val)
 			<div class="uk-width-large-1-4 uk-visible-large div-room">
 				<div class="iteam-why">
-					<img src="data/10-nam.png">
-					<h4>10 năm 1 phong cách</h4>
-					<p>10 năm theo đuổi phong cách hiện đại, AEC khẳng định vị thế dẫn đầu trong trường phái này. Với > 400 căn hộ được thiết kế & thi công nội thất trọn gói mỗi năm, chúng tôi là 1 trong những đơn vị uy tín hàng đầu miền Bắc</p>
+					<img src="data/section/300/{{$val->img}}">
+					<h4>{{$val->name}}</h4>
+					{!! $val->content !!}
 				</div>
 			</div>
-		
-			<div class="uk-width-large-1-4 uk-visible-large div-room">
-				<div class="iteam-why">
-					<img src="data/10-nam.png">
-					<h4>10 năm 1 phong cách</h4>
-					<p>10 năm theo đuổi phong cách hiện đại, AEC khẳng định vị thế dẫn đầu trong trường phái này. Với > 400 căn hộ được thiết kế & thi công nội thất trọn gói mỗi năm, chúng tôi là 1 trong những đơn vị uy tín hàng đầu miền Bắc</p>
-				</div>
-			</div>
-		
-			<div class="uk-width-large-1-4 uk-visible-large div-room">
-				<div class="iteam-why">
-					<img src="data/10-nam.png">
-					<h4>10 năm 1 phong cách</h4>
-					<p>10 năm theo đuổi phong cách hiện đại, AEC khẳng định vị thế dẫn đầu trong trường phái này. Với > 400 căn hộ được thiết kế & thi công nội thất trọn gói mỗi năm, chúng tôi là 1 trong những đơn vị uy tín hàng đầu miền Bắc</p>
-				</div>
-			</div>
-
-			<div class="uk-width-large-1-4 uk-visible-large div-room">
-				<div class="iteam-why">
-					<img src="data/10-nam.png">
-					<h4>10 năm 1 phong cách</h4>
-					<p>10 năm theo đuổi phong cách hiện đại, AEC khẳng định vị thế dẫn đầu trong trường phái này. Với > 400 căn hộ được thiết kế & thi công nội thất trọn gói mỗi năm, chúng tôi là 1 trong những đơn vị uy tín hàng đầu miền Bắc</p>
-				</div>
-			</div>
+			@endforeach
 		</div>
 	</div>
 </section><!-- .commitment-section -->

@@ -14,7 +14,7 @@ class c_section extends Controller
 {
     public function getlist()
     {
-        $section = section::where('sort_by',2)->orderBy('id','desc')->get();
+        $section = section::orderBy('id','desc')->get();
         return view('admin.section.list',[
             'section'=>$section
         ]);
@@ -22,35 +22,18 @@ class c_section extends Controller
 
     public function getadd()
     {
-        $category = category::where('sort_by',2)->orderBy('id','desc')->get();
         return view('admin.section.addedit',[
-            'category'=>$category
         ]);
     }
 
     public function postadd(Request $Request)
     {
         $this->validate($Request,['name' => 'Required'],[] );
-        // seo
-        $seo = new seo;
-        $seo->title = $Request->title;
-        $seo->description = $Request->description;
-        $seo->keywords = $Request->keywords;
-        $seo->robot = $Request->robot;
-        $seo->save();
-
         $section = new section;
         $section->user_id = Auth::User()->id;
-        $section->category_id = $Request->cat_id;
-        $section->seo_id = $seo->id;
-        $section->sort_by = '2';
-        $section->sku = str_random(8);
         $section->name = $Request->name;
-        $section->slug = changeTitle($Request->name);
-        $section->detail = $Request->detail;
         $section->content = $Request->content;
-        $section->hits = '50';
-        $section->status = 'true';
+        $section->note = $Request->note;
         // thêm ảnh
         if ($Request->hasFile('img')) {
             $file = $Request->file('img');
@@ -58,7 +41,6 @@ class c_section extends Controller
             while(file_exists("data/section/300/".$filename)){ $filename = str_random(4)."_".$filename; }
             $img = Image::make($file)->resize(1000, 800, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/section/'.$filename));
             $img = Image::make($file)->resize(300, 300, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/section/300/'.$filename));
-            $img = Image::make($file)->resize(80, 80, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/section/80/'.$filename));
             $section->img = $filename;
         }
         // thêm ảnh
@@ -69,30 +51,24 @@ class c_section extends Controller
     public function getedit($id)
     {
         $data = section::findOrFail($id);
-        $seo = seo::findOrFail($data['seo_id']);
-        $category = category::where('sort_by',2)->orderBy('id','desc')->get();
         return view('admin.section.addedit',[
             'data'=>$data,
-            'category'=>$category,
-            'seo'=>$seo,
         ]);
     }
 
     public function postedit(Request $Request,$id)
     {
-        $this->validate($Request,['name' => 'Required'],[] );     
-        $section = section::find($id);
+        $this->validate($Request,['name' => 'Required'],[] ); 
+        $section = section::find($id);    
+        $section->user_id = Auth::User()->id;
         $section->name = $Request->name;
-        $section->slug = $Request->slug;
-        $section->detail = $Request->detail;
         $section->content = $Request->content;
-        $section->category_id = $Request->cat_id;
+        $section->note = $Request->note;
         if ($Request->hasFile('img')) {
             // xóa ảnh cũ
             if(File::exists('data/section/'.$section->img)) { 
                 File::delete('data/section/'.$section->img); 
                 File::delete('data/section/300/'.$section->img); 
-                File::delete('data/section/80/'.$section->img); 
             }
             // xóa ảnh cũ
             // thêm ảnh mới
@@ -101,32 +77,20 @@ class c_section extends Controller
             while(file_exists("data/section/300/".$filename)){ $filename = str_random(4)."_".$filename; }
             $img = Image::make($file)->resize(1000, 800, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/section/'.$filename));
             $img = Image::make($file)->resize(300, 300, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/section/300/'.$filename));
-            $img = Image::make($file)->resize(80, 80, function ($constraint) {$constraint->aspectRatio();})->save(public_path('data/section/80/'.$filename));
             $section->img = $filename;
             // thêm ảnh mới
         }
         $section->save();
-        $seo = seo::find($section->seo_id);
-        $seo->title = $Request->title;
-        $seo->description = $Request->description;
-        $seo->keywords = $Request->keywords;
-        $seo->robot = $Request->robot;
-        $seo->save();
         return redirect('admin/section/edit/'.$id)->with('Alerts','Thành công');
     }
 
     public function getdelete($id)
     {
         $section = section::find($id);
-        
-        $seo = seo::find($section->seo_id);
-        $seo->delete();
-
         // xóa ảnh
         if(File::exists('data/section/'.$section->img)) {
             File::delete('data/section/'.$section->img);
             File::delete('data/section/300/'.$section->img);
-            File::delete('data/section/80/'.$section->img);
         }
         // xóa ảnh
         $section->delete();

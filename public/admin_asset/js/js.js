@@ -60,6 +60,64 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $("button#dell_img").click(function(){
+        var id = $(this).val();
+        // alert(id_img);
+        $.ajax({
+            url:  'admin/ajax/delete_img/'+id,
+            type: 'GET',
+            cache: false,
+            data: {
+            },
+            // success: function(data){
+            //     $('#data-cat').html(data);
+            // }
+        });
+    });
+});
+$(document).ready(function(){
+    $(document).on('click', '#dell_img', function(e){ 
+        e.preventDefault();
+        $(this).parent('.imgdetail').remove();
+        x--;
+    });
+});
+
+// seo
+function changetitle (el) {
+    var max_title = 70;
+    if (el.value.length > max_title) {
+        el.value = el.value.substr(0, max_title);
+    }
+    document.getElementById('chars_title').innerHTML = max_title - el.value.length;
+    return true;
+}
+function changedescription (el) {
+    var max_desc = 170;
+    if (el.value.length > max_desc) {
+        el.value = el.value.substr(0, max_desc);
+    }
+    document.getElementById('chars_left').innerHTML = max_desc - el.value.length;
+    return true;
+}
+$(function(){
+    $("input#seo_title").keyup(function () {
+        var value = $(this).val();
+        $(".seo_title").text(value);
+    }).keyup();
+});
+
+$(function(){
+    $("input#seo_description").keyup(function () {
+        var value = $(this).val();
+        $(".seo_description").text(value);
+    }).keyup();
+});
+
+
+// end seo
+
 // nhập hang
 $(document).ready(function(){
     $("#sanpham").change(function(){

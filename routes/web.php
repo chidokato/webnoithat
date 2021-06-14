@@ -16,7 +16,6 @@ Route::group(['prefix'=>'admin','middleware'=>'adminlogin'],function(){
 		Route::get('add','usercontroller@getadd')->middleware('can:superadmin');
 		Route::post('add','usercontroller@postadd');
 		Route::get('delete/{id}','usercontroller@getdelete')->middleware('can:superadmin');
-
 	});
 	Route::group(['prefix'=>'profile'],function(){
 		Route::get('list','c_profile@getlist');
@@ -67,6 +66,14 @@ Route::group(['prefix'=>'admin','middleware'=>'adminlogin'],function(){
 	Route::group(['prefix'=>'setting'],function(){
 		Route::get('list','c_setting@getlist');
 		Route::post('edit/{id}','c_setting@postedit');
+	});
+	Route::group(['prefix'=>'section'],function(){
+		Route::get('list','c_section@getlist');
+		Route::get('add','c_section@getadd');
+		Route::post('add','c_section@postadd');
+		Route::get('edit/{id}','c_section@getedit');
+		Route::post('edit/{id}','c_section@postedit');
+		Route::get('delete/{id}','c_section@getdelete');
 	});
 
 	// giày dép
@@ -122,6 +129,7 @@ Route::group(['prefix'=>'admin','middleware'=>'adminlogin'],function(){
 	// end bất động sản
 	
 	Route::group(['prefix'=>'ajax'],function(){
+		Route::get('delete_img/{id}','c_ajax@delete_img'); // delete images edit
 		Route::get('sort_by/{id}','c_ajax@sortby'); // category
 		Route::get('updateview/{id}','c_ajax@updateview'); // update view category/list
 
