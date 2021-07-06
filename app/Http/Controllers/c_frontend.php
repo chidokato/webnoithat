@@ -119,10 +119,17 @@ class c_frontend extends Controller
             ->whereNotin('id',[$id])
             ->take(8)
             ->get();
-        return view('pages.articles',[
-            'articles'=>$articles,
-            'lienquan'=>$lienquan
-        ]);
+        if ($articles['sort_by']==1) {
+            return view('pages.articles_product',[
+                'articles'=>$articles,
+                'lienquan'=>$lienquan
+            ]);
+        }else{
+            return view('pages.articles',[
+                'articles'=>$articles,
+                'lienquan'=>$lienquan
+            ]);
+        }
     }
 
     public function post_search(Request $Request)
